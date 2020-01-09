@@ -10,7 +10,7 @@ export class DashboardService {
   bigChart() {
     return [{
       name: 'Consumption',
-      data: [502, 635, 809, 947, 1402, 3634, 5268,106, 107, 111, 133, 221, 767, 1766,502, 635, 809, 947, 1402, 3634, 5268,502, 635, 809, 947, 1402, 3634, 5268,106,234],
+      data: [1234, 635, 809, 947, 500, 880, 526,106, 107, 111, 133, 221, 767, 166,502, 635, 809, 947, 102, 634, 526,502, 635, 809, 947, 1402, 3634, 5268,106,234],
       pointStart: Date.UTC(2020, 0, 1),
       pointInterval: 24 * 3600 * 1000
     
@@ -23,34 +23,25 @@ export class DashboardService {
 
   pieChart() {
     return [{
-      name: 'Chrome',
+      name: 'Energy Provided',
       y: 61.41,
       sliced: true,
       selected: true
     }, {
-      name: 'Internet Explorer',
+      name: 'Consumption per day',
       y: 11.84
     }, {
-      name: 'Firefox',
+      name: 'Consumption per month',
       y: 10.85
     }, {
-      name: 'Edge',
+      name: 'Consumption per minute',
       y: 4.67
     }, {
-      name: 'Safari',
+      name: 'Energy Saved per month',
       y: 4.18
     }, {
-      name: 'Sogou Explorer',
+      name: 'Energy saved per day',
       y: 1.64
-    }, {
-      name: 'Opera',
-      y: 1.6
-    }, {
-      name: 'QQ',
-      y: 1.2
-    }, {
-      name: 'Other',
-      y: 2.61
     }];
   }
 }
