@@ -23,14 +23,25 @@ export class AreaComponent implements OnInit {
         type: 'area'
       },
       title: {
-        text: 'Random DATA'
+        text: 'Consumption Per Day'
       },
       subtitle: {
-        text: 'Demo'
+        text: 'Houshold Consumption'
       },
+      xAxis: {
+        type: 'datetime',
+        dateTimeLabelFormats: {
+            day: '%e %b %Y'
+        }
+      },
+
+      yAxis:[ {title: {
+          text: "Units (kWh)"
+        }}
+      ],
       tooltip: {
         split: true,
-        valueSuffix: ' millions'
+        valueSuffix: ' units(kWh)'
       },
       credits: {
         enabled: false
