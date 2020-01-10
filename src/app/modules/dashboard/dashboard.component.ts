@@ -57,4 +57,10 @@ export class DashboardComponent implements OnInit {
     this.dataSource.paginator = this.paginator;
   }
 
+  printData() {
+    this.dashboardService.printRandomData().subscribe((data)=>{
+      console.log(data);
+    });
+  }
+
 }

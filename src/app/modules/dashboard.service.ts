@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DashboardService {
 
-  constructor() { }
+  constructor(private httpClient: HttpClient) { }
 
   bigChart() {
     return [{
@@ -19,6 +20,10 @@ export class DashboardService {
 
   cards() {
     return [71, 78, 39, 66];
+  }
+
+  printRandomData() {
+    return this.httpClient.get("https://uselessfacts.jsph.pl/random.json");
   }
 
   pieChart() {

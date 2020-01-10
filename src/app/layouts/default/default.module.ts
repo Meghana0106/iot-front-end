@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { DefaultComponent } from './default.component';
 import { DashboardComponent } from 'src/app/modules/dashboard/dashboard.component';
 import { RouterModule } from '@angular/router';
@@ -19,6 +20,7 @@ import { DashboardService } from 'src/app/modules/dashboard.service';
   ],
   imports: [
     CommonModule,
+    HttpClientModule,
     RouterModule,
     SharedModule,
     MatSidenavModule,
