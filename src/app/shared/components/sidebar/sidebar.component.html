@@ -1,33 +1,39 @@
+
 <mat-nav-list>
     <div class="profile-card">
-        <div class="header">
+        <!-- <div class="header">
             <h2>Smart Meter Reading</h2>
             <h4>anitha13mar@gmail.com</h4>
-        </div>
+        </div> -->
         <img src="/assets/images/download.jpg" alt="Soufiane FADIL">
     </div>
 
     <mat-divider></mat-divider>
 
-    <h2 matSubheader>Pages</h2>
+    <!-- <h2 matSubheader>Pages</h2> -->
+    <div *ngIf="loggedIn">
+        <a mat-list-item routerLinkActive="list-item-active" routerLink="/">Dashboard</a>
+        <a mat-list-item routerLinkActive="list-item-active" routerLink="/posts">Posts</a>
+        <a mat-list-item routerLinkActive="list-item-active" routerLink="/consumers">Consumers</a>
+        <a mat-list-item routerLinkActive="list-item-active" routerLink="/articles">Articles</a>
+    </div>
 
-    <a mat-list-item routerLinkActive="list-item-active" routerLink="/">Dashboard</a>
-    <a mat-list-item routerLinkActive="list-item-active" routerLink="/posts">Posts</a>
-    <a mat-list-item routerLinkActive="list-item-active" routerLink="/consumers">Consumers</a>
-    <a mat-list-item routerLinkActive="list-item-active" routerLink="/articles">Articles</a>
-
+    
     <mat-divider></mat-divider>
 
-    <h2 matSubheader>Tools</h2>
+    <div *ngIf="!loggedIn">
+        <h2 matSubheader>Authentication</h2>
 
-    <a mat-list-item routerLinkActive="list-item-active" routerLink="/contacts">
-        <mat-icon>import_contacts</mat-icon>
-        Contacts
-    </a>
+        <a mat-list-item routerLinkActive="list-item-active" routerLink="/login">
+    <!-- <mat-icon>import_contacts</mat-icon> -->
+            Login
+        </a>
+    </div>
+    
 
-    <a mat-list-item routerLinkActive="list-item-active" routerLink="/contacts">
+    <!-- <a mat-list-item routerLinkActive="list-item-active" routerLink="/contacts">
         <mat-icon>contact_phone</mat-icon>
         Leads
-    </a>
+    </a> -->
 
 </mat-nav-list>

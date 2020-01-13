@@ -10,13 +10,16 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { MatSidenavModule, MatDividerModule, MatCardModule, MatPaginatorModule, MatTableModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { DashboardService } from 'src/app/modules/dashboard.service';
+import { LoginComponent } from 'src/app/modules/login/login.component';
+import {GlobalService} from '../../global.service'; 
 
 @NgModule({
   declarations: [
     DefaultComponent,
     DashboardComponent,
     PostsComponent,
-    ConsumersComponent
+    ConsumersComponent,
+    LoginComponent
   ],
   imports: [
     CommonModule,

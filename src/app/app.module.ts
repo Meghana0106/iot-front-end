@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DefaultModule } from './layouts/default/default.module';
+import {GlobalService} from './global.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { DefaultModule } from './layouts/default/default.module';
     BrowserAnimationsModule,
     DefaultModule
   ],
-  providers: [],
+  providers: [GlobalService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
