@@ -61,7 +61,6 @@ export class AreaComponent implements OnInit {
    this.loadNewData();
   }
 
-
   ngOnInit() {
     this.chartOptions = {
       chart: {
