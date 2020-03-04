@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
+
 import { Routes, RouterModule } from '@angular/router';
 import { DefaultComponent } from './layouts/default/default.component';
 import { DashboardComponent } from './modules/dashboard/dashboard.component';
-import { PostsComponent } from './modules/posts/posts.component';
-import { LoginComponent } from './modules/login/login.component';
+import { CreateComponent} from './modules/create/create.component';
+import { LoginComponent} from './modules/login/login.component';
 import { ConsumersComponent } from './modules/consumers/consumers.component';
-import { from } from 'rxjs';
+import { SearchconsumerComponent } from './modules/searchconsumer/searchconsumer.component';
 
 const routes: Routes = [{
 	path: '',
@@ -14,9 +15,14 @@ const routes: Routes = [{
 		path: '',
 		component: DashboardComponent
 	}, {
-		path: 'posts',
-		component: PostsComponent,
-	}, {
+		path: 'create',
+		component: CreateComponent,
+		
+	},{
+		path: 'searchconsumer',
+		component:SearchconsumerComponent,
+
+	},{
 		path: 'login',
 		component: LoginComponent,
 	
@@ -31,4 +37,6 @@ const routes: Routes = [{
 	imports: [RouterModule.forRoot(routes)],
 	exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+	
+ }

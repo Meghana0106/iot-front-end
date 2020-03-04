@@ -13,8 +13,8 @@ export class GlobalService {
   
 
   constructor() {
-    //this.isLoggedIn.next(false);
-    //this.isLoggedIn = new BehaviorSubject<boolean>(false);
+    this.isLoggedIn.next(false);
+    this.isLoggedIn = new BehaviorSubject<boolean>(false);
   }
   updatedAuthState(flag: boolean){
     this.isLoggedIn.next(flag);
