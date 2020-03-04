@@ -1,5 +1,36 @@
+
+ <!-- <h4>Basic mat-select</h4>   -->
+ <div class="row col-12">
+    <label class="col-2 px-2">Select Month:</label>
+    
+<select class="col-2" (change)="onSelectMonth($event)">
+ <option *ngFor="let item of MonthArray" [value]="item.value">
+   {{ item.viewValue }}
+ </option>
+</select>
+</div>
 <div>
-    <app-widget-area [data]="bigChart"></app-widget-area>
+
+ <app-widget-area [data]="bigChart"></app-widget-area>
+</div>
+
+<br>
+
+<mat-divider></mat-divider> 
+
+<br>
+
+<div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px" >
+ <mat-card fxFlex="25">
+     <app-widget-card label="Total Consumption of Consumers" total="80k"  ></app-widget-card>
+ </mat-card>
+ <mat-card fxFlex="25">
+     <app-widget-card label="Total Loss" total="20k" ></app-widget-card>
+ </mat-card>
+ <mat-card fxFlex="25">
+     <app-widget-card label="Payment Due" total="30k" ></app-widget-card>
+ </mat-card>
+
 </div>
 
 <br>
@@ -8,70 +39,14 @@
 
 <br>
 
-<div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px" class="stats-cards">
-    <mat-card fxFlex="25">
-        <app-widget-card label="New Users" total="15k" percentage="50" [data]="cards"></app-widget-card>
-    </mat-card>
-    <mat-card fxFlex="25">
-        <app-widget-card label="Consumers payment due" total="8k" percentage="40" [data]="cards"></app-widget-card>
-    </mat-card>
-    <mat-card fxFlex="25">
-        <app-widget-card label="Providers Overview" total="54k" percentage="30" [data]="cards"></app-widget-card>
-    </mat-card>
-    <mat-card fxFlex="25">
-        <app-widget-card label="Customers Consumption" total="k" percentage="20" [data]="cards"></app-widget-card>
-    </mat-card>
-</div>
+<!-- <button id="print" (click)="printData()">Click to print</button> -->
 
 <br>
-
-<mat-divider></mat-divider>
-
-<br>
-
-<button id="print" (click)="printData()">Click to print</button>
-
-<br>
-<div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px">
-    <div fxFlex="60">
-        <div class="mat-elevation-z8">
-            <table mat-table [dataSource]="dataSource">
-
-                <!-- Position Column -->
-                <ng-container matColumnDef="position">
-                    <th mat-header-cell *matHeaderCellDef> No. </th>
-                    <td mat-cell *matCellDef="let element"> {{element.position}} </td>
-                </ng-container>
-
-                <!-- Name Column -->
-                <ng-container matColumnDef="name">
-                    <th mat-header-cell *matHeaderCellDef> Name </th>
-                    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
-                </ng-container>
-
-                <!-- Weight Column -->
-                <ng-container matColumnDef="weight">
-                    <th mat-header-cell *matHeaderCellDef> Weight </th>
-                    <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
-                </ng-container>
-
-                <!-- Symbol Column -->
-                <ng-container matColumnDef="symbol">
-                    <th mat-header-cell *matHeaderCellDef> Symbol </th>
-                    <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
-                </ng-container>
-
-                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-            </table>
-
-            <mat-paginator [pageSizeOptions]="[5, 10, 20]"></mat-paginator>
-        </div>
-
-    </div>
-    <div fxFlex="40">
-        <app-widget-pie [data]="pieChart"></app-widget-pie>
-    </div>
+<div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="10px">
+ 
+ <div fxFlex="40">
+     <app-widget-pie style="align-items: center;" [data]="pieChart"></app-widget-pie>
+ </div>
 </div>
 
 <br>

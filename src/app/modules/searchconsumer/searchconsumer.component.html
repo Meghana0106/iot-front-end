@@ -1,0 +1,73 @@
+<form [formGroup]="searchForm" (ngSubmit)="submit()">
+    <div class="form-gorup">
+        <label class="left-border px-2"><strong>
+                Search consumer</strong></label>
+        <hr class="mt-0">
+    </div>
+    <div class="column col-12 px-0">
+        <div class="row">
+            <div class="col-12 col-sm-10 col-lg-6 col-xl-4 py-2">
+                <label class="mb-0">RR Number</label>
+
+                <input type="text" class="form-control col-12" placeholder="Enter Your RR Number"
+                    formControlName="RRNumber" id="rrno" maxlength="10">
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center my-3">
+
+        <button type="submit" class="btn btn-warning" id="Submit-UpdateAssessment">Search</button>
+    </div>
+</form>
+<br>
+<br>
+<div>
+
+    <div>
+        {{consumerData.c_id}}
+    </div>
+
+    <div>
+        {{consumerData.name}}
+    </div>
+    <div>
+        {{consumerData.contact}}
+    </div>
+    <div>
+        {{consumerData.address}}
+    </div>
+    <div>
+        {{consumerData.rrno}}
+    </div>
+
+</div>
+<br>
+
+<div>
+    <app-widget-barchart [data]="monthlyBill" [chartOp]="monthlyBillChartOption"></app-widget-barchart>
+</div>
+
+<div>
+    <app-widget-barchart [data]="dailyConsumption" [chartOp]="dailyConsumptionChartOption"></app-widget-barchart>
+</div>
+
+<div>
+    <app-widget-barchart [data]="monthlyConsumption" [chartOp]="monthlyConsumptionChartOption"></app-widget-barchart>
+</div>
+
+
+<div>
+    <app-widget-pie [data]="hourlyConsumption" [chartOp]="hourlyConsumption"></app-widget-pie>
+</div>
+
+<mat-card>
+    <app-widget-card label=" Current Bill"></app-widget-card>
+</mat-card>
+
+<div *ngIf="yearlyConsumption.length">
+    <app-widget-barchart [data]="yearlyConsumption" [chartOp]="yearConsumptionChartOption"></app-widget-barchart>
+</div>

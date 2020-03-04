@@ -1,0 +1,70 @@
+<div class="app-body">
+	<main class="main d-flex align-items-center">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 mx-auto">
+					<div class="card mx-4">
+						<div class="card-body p-4">
+							<form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+								<div class="form-row">
+									<h1>Create your account</h1>
+									<br>
+									<br>
+									 <p class="text-muted"></p>
+									<div class="form-group col-5">
+										<label>Name</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+										<input type="text" formControlName="name" class="form-control"
+											[ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
+										<div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+											<div *ngIf="f.name.errors.required "> Name is required</div>
+										</div>
+									</div>
+								</div>
+								<br>
+
+								<div class="form-group">
+									<label>Contact</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									
+									<input type="text" formControlName="contact" class="form-control"
+										[ngClass]="{ 'is-invalid': submitted && f.contact.errors }" />
+									<div *ngIf="submitted && f.contact.errors" class="invalid-feedback">
+										<div *ngIf="f.contact.errors.required">Contact Number is required</div>
+
+									</div>
+								</div>
+								<br>
+								<div class="form-group">
+									<label>Address</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<input type="text" formControlName="address" class="form-control"
+										[ngClass]="{ 'is-invalid': submitted && f.address.errors }" />
+									<div *ngIf="submitted && f.address.errors" class="invalid-feedback">
+										<div *ngIf="f.address.required">Address is required</div>
+
+									</div>
+								</div>
+								<br>
+
+								<div class="form-group">
+									<label>RR Number</label>&nbsp;&nbsp;&nbsp;
+									<input type="text" formControlName="rrno" class="form-control"
+										[ngClass]="{ 'is-invalid': submitted && f.rrno.errors }" />
+									<div *ngIf="submitted && f.rrno.errors" class="invalid-feedback">
+										<div *ngIf="f.rrno.required">RR Number is required</div>
+
+									</div>
+								</div>
+								<br>
+
+
+								<div class="text-center">
+									<button class="btn btn-primary mr-1">Submit</button>&nbsp;&nbsp;&nbsp;
+									<button class="btn btn-secondary" type="reset" (click)="onReset()">Cancel</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+</div>

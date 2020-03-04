@@ -1,0 +1,51 @@
+// component css goes here
+#searchconsumer-view {
+    .font-style {
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .left-border {
+        border-left: 6px solid orange;
+    }
+
+    //   #breadcrumb{
+    .background {
+        background-color: transparent !important;
+    }
+
+    .breadcrum-nav {
+        color: #828286;
+        font-size: 18px;
+        font-weight: 300;
+    }
+
+    .breadcrum-nav:hover {
+        color: #F79005;
+    }
+
+    .active-style {
+        font-size: 18px;
+        font-weight: 300;
+        color: #00BABC;
+    }
+
+    :host ::ng-deep .ngx-datepicker-container {
+        z-index: 99999 !important;
+    }
+
+    ::ng-deep .ngx-datepicker-calendar-container {
+        z-index: 99999 !important;
+    }
+
+    ::ng-deep .ngx-datepicker-position-bottom-right {
+        z-index: 99999 !important;
+    }
+}
+
+  
+    .mat-card {
+        margin: 0 auto;
+        width: 40%;
+        height: 40%;
+    }
+  

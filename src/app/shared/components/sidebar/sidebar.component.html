@@ -13,12 +13,10 @@
     <!-- <h2 matSubheader>Pages</h2> -->
     <div *ngIf="loggedIn">
         <a mat-list-item routerLinkActive="list-item-active" routerLink="/">Dashboard</a>
-        <a mat-list-item routerLinkActive="list-item-active" routerLink="/posts">Posts</a>
-        <a mat-list-item routerLinkActive="list-item-active" routerLink="/consumers">Consumers</a>
-        <a mat-list-item routerLinkActive="list-item-active" routerLink="/articles">Articles</a>
+        <a mat-list-item routerLinkActive="list-item-active" routerLink="/consumers">Consumers Details</a>
+        <a mat-list-item routerLinkActive="list-item-active" routerLink="/searchconsumer">Search Consumer</a>
+        <a mat-list-item routerLinkActive="list-item-active" routerLink="/create">Create</a>
     </div>
-
-    
     <mat-divider></mat-divider>
 
     <div *ngIf="!loggedIn">

@@ -1,9 +1,16 @@
-.stats-cards {
-  .mat-card {
-    overflow: hidden;
-  }
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+mat-drawer {
+  width: 350px;
 }
 
-table {
-  width: 100%;
+mat-drawer-container {
+  height: 100%;
+}
+
+mat-drawer-content {
+  padding: 20px;
 }
