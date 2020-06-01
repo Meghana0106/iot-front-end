@@ -13,7 +13,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { DashboardService } from 'src/app/modules/dashboard.service';
 import { LoginComponent } from 'src/app/modules/login/login.component';
  import { GlobalService } from '../../global.service';
- import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+//  import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
  import {CreateComponent} from 'src/app/modules/create/create.component';
  
 
@@ -40,7 +40,7 @@ import { LoginComponent } from 'src/app/modules/login/login.component';
     MatCardModule,
     MatPaginatorModule,
     MatTableModule,
-    NgbModule
+    // NgbModule
   ],
   providers: [
     DashboardService,

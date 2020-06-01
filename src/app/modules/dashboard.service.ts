@@ -40,7 +40,7 @@ export class DashboardService {
 		return [71, 78, 39, 66];
 	}
 
-	getConsumer(rrno: number): Observable<any> {
+	getConsumer(rr_no: number): Observable<any> {
 		return this.httpClient.get("http://localhost:3000/consumer");
 	  }
 
@@ -58,7 +58,8 @@ export class DashboardService {
             c_id:'87676',
 			name: 'aaa',
 			contact: '2212121221',
-			rrno: '8978676',
+			email:'ani@gmail.com',
+			rr_no: 'AB8676',
 			address: 'aaav'
 		}
 		return this.httpClient.post("http://localhost:3000/consumer", body).subscribe(

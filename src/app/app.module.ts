@@ -8,8 +8,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DefaultModule } from './layouts/default/default.module';
 import { GlobalService } from './global.service';
 import { CommonModule} from '@angular/common';
-import { MDBBootstrapModule } from 'angular-bootstrap-md';
-import { NgSelectModule } from '@ng-select/ng-select';
+// import { MDBBootstrapModule } from 'angular-bootstrap-md';
+// import { NgSelectModule } from '@ng-select/ng-select';
 import { MatSelectModule, MatFormFieldModule, MatInputModule } from '@angular/material';
 
 @NgModule({
@@ -29,8 +29,8 @@ import { MatSelectModule, MatFormFieldModule, MatInputModule } from '@angular/ma
     MatFormFieldModule,
     MatInputModule,
     DefaultModule,
-    NgSelectModule,
-    MDBBootstrapModule.forRoot()
+    // NgSelectModule,
+    // MDBBootstrapModule.forRoot()
   ],
   providers: [GlobalService],
   bootstrap: [AppComponent],
