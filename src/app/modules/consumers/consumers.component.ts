@@ -8,15 +8,14 @@ import { MatTableDataSource, MatPaginator } from '@angular/material';
 export interface consumer {
   name: string;
   password: string;
-  rrno: number;
+  rr_no: string;
   contact: number;
-  c_id: number;
+  c_id: string;
   address:string;
+  email:string;
 }
 const ELEMENT_DATA: consumer[] = [
-  { c_id:1, name: '',contact:21328790, password:'',address:'',rrno: 98674876},
-  
-  
+  { c_id:'', name: '',contact:21328790, email:'', password:'',address:'',rr_no: ''},
   
 ];
 
@@ -34,7 +33,7 @@ export class ConsumersComponent implements OnInit {
 
   
 
-  displayedColumns: string[] = ['c_id', 'name','contact','address','rrno'];
+  displayedColumns: string[] = ['c_id', 'name','contact', 'email', 'address','rr_no'];
   dataSource = new MatTableDataSource([]);
 
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;

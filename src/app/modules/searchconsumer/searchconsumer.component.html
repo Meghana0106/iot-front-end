@@ -48,7 +48,27 @@
 </div>
 <br>
 
-<div>
+<form [formGroup]="searchForm" (ngSubmit)="Submit()">
+    
+    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center my-3">
+
+        <button type="Submit" class="btn btn-warning" id="Submit-Update">Show in Graph</button>
+    </div>
+</form>
+
+    <div *ngIf="yearlyConsumption.length">
+        <app-widget-barchart [data]="yearlyConsumption" [chartOp]="yearConsumptionChartOption"></app-widget-barchart>
+    </div>
+    
+    <div *ngIf="yearConsumption.length">
+        <app-widget-barchart [data]="yearConsumption" [chartOp]="monthlyConsumptionChartOption"></app-widget-barchart>
+    </div>
+    <div *ngIf="yearlyConsumption.length">
+        <app-widget-barchart [data]="yearlyConsumption" [chartOp]="dailyConsumptionChartOption"></app-widget-barchart>
+    </div>
+
+
+<!-- <div>
     <app-widget-barchart [data]="monthlyBill" [chartOp]="monthlyBillChartOption"></app-widget-barchart>
 </div>
 
@@ -67,8 +87,6 @@
 
 <mat-card>
     <app-widget-card label=" Current Bill"></app-widget-card>
-</mat-card>
+</mat-card> -->
 
-<div *ngIf="yearlyConsumption.length">
-    <app-widget-barchart [data]="yearlyConsumption" [chartOp]="yearConsumptionChartOption"></app-widget-barchart>
-</div>
+

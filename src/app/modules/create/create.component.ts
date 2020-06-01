@@ -3,6 +3,7 @@ import { DashboardService } from '../dashboard.service';
 import { HttpClient,HttpHeaders} from '@angular/common/http';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MustMatch } from 'src/app/_helpers/must-match.validator';
+import { validateBasis } from '@angular/flex-layout';
 
 declare var Messenger: any;
 
@@ -20,9 +21,10 @@ export class CreateComponent implements OnInit {
   ngOnInit() {
 	this.addForm = this.formBuilder.group({
 		name: ['', Validators.required],
-		contact: ['', Validators.required],
+		contact: ['', [Validators.required, Validators.pattern('^[6-9]\d{9}$')]],
+		email: ['', [Validators.required, Validators.email,Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$')]],
 		address: ['', Validators.required],
-		rrno: ['', Validators.required]
+		rr_no: ['', Validators.required]
 	});
 
   }
@@ -34,7 +36,7 @@ export class CreateComponent implements OnInit {
 		console.log();
 	}
 
-	onSubmit(){
+	public onSubmit(){
 		if(this.addForm.valid){
 			this.submitted = true;
 		  console.log(this.addForm.value);
@@ -52,13 +54,25 @@ export class CreateComponent implements OnInit {
 			return;
 		}
 		alert('Your fields are Entered successfully!');
-		}		
+		}	else {
+			this.showError()
+		}	
 	}
 	onReset() {
         this.submitted = false;
         this.addForm.reset();
-    }
+	}
+	
+	private showError(){
+
+		if(!this.addForm.get('name').valid){
+			console.log("Invalid NAme")
+		}
+	  
+	}
   }
+
+
 
 	// onSubmit() {
 		

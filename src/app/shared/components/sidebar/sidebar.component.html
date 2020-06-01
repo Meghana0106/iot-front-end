@@ -1,4 +1,5 @@
 
+
 <mat-nav-list>
     <div class="profile-card">
         <!-- <div class="header">
@@ -12,21 +13,21 @@
 
     <!-- <h2 matSubheader>Pages</h2> -->
     <div *ngIf="loggedIn">
-        <a mat-list-item routerLinkActive="list-item-active" routerLink="/">Dashboard</a>
+        <a mat-list-item routerLinkActive="list-item-active" routerLink="/dashboard">Dashboard</a>
         <a mat-list-item routerLinkActive="list-item-active" routerLink="/consumers">Consumers Details</a>
         <a mat-list-item routerLinkActive="list-item-active" routerLink="/searchconsumer">Search Consumer</a>
         <a mat-list-item routerLinkActive="list-item-active" routerLink="/create">Create</a>
     </div>
     <mat-divider></mat-divider>
 
-    <div *ngIf="!loggedIn">
-        <h2 matSubheader>Authentication</h2>
+    <!-- <div *ngIf="!loggedIn"> -->
+        <!-- <h2 matSubheader>Authentication</h2> -->
 
-        <a mat-list-item routerLinkActive="list-item-active" routerLink="/login">
+        <!-- <a mat-list-item routerLinkActive="list-item-active" routerLink="/login">  -->
     <!-- <mat-icon>import_contacts</mat-icon> -->
-            Login
-        </a>
-    </div>
+            <!-- Login -->
+        <!-- </a> -->
+    <!-- </div>  -->
     
 
     <!-- <a mat-list-item routerLinkActive="list-item-active" routerLink="/contacts">

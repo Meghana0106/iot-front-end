@@ -38,44 +38,44 @@ export class LoginComponent implements OnInit {
 		
 	}
 	
-	// onSubmit() {
+	onSubmit() {
 		
-	// 	if (this.loginForm.valid) {
-	// 		this.submitted = true;
-	// 		console.log(this.loginForm.value);
-	// 		const data = this.loginForm.value;
-	// 		const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-	// 		this.httpClient.post("http://localhost:3000/account", data).subscribe(
-	// 			res => {
-	// 				console.log(res);
-	// 				  console.log("click logged in");
-	// 				 this.globals.updatedAuthState(true);
-	// 				this.router.navigate(['/']);
-	// 			},
-	// 			err => {
-	// 				console.log('err:' + err);
-	// 				this.loading = false;
-	// 			}
-	// 		);
+		if (this.loginForm.valid) {
+			this.submitted = true;
+			console.log(this.loginForm.value);
+			const data = this.loginForm.value;
+			const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+			this.httpClient.post("http://localhost:3000/account", data).subscribe(
+				res => {
+					console.log(res);
+					  console.log("click logged in");
+					 this.globals.updatedAuthState(true);
+					this.router.navigate(['dashboard']);
+				},
+				err => {
+					console.log('err:' + err);
+					this.loading = false;
+				}
+			);
 
-	// 		if (this.loginForm.invalid) {
-	// 			return;
+			if (this.loginForm.invalid) {
+				return;
 				
-	// 		}
-	// 	}	
+			}
+		}	
 		
 	
-	// };
+	};
 
-	onSubmit() {
-		this.submitted = true;
-		if(this.loginForm.invalid){
-			return;
+	// onSubmit() {
+	// 	this.submitted = true;
+	// 	if(this.loginForm.invalid){
+	// 		return;
 
-		}
+	// 	}
 		
 
-	}
+	// }
 
 
 }
