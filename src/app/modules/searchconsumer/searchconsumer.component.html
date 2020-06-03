@@ -17,8 +17,6 @@
         
     </div>
 
-
-
     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center my-3">
 
         <button type="submit" class="btn btn-warning" id="Submit-UpdateAssessment">Search</button>
@@ -56,13 +54,12 @@
     </div>
 </form> -->
 
-    <!-- <div *ngIf="yearConsumption.length">
+     <div *ngIf="yearConsumption.length"> -->
         <app-widget-barchart [data]="yearConsumption" [chartOp]="yearlyConsumptionChartOption"></app-widget-barchart>
-    </div> -->
-    
-    <!-- <div *ngIf="monthConsumption.length">
+    </div> 
+     <div *ngIf="monthConsumption.length">
         <app-widget-barchart [data]="monthConsumption" [chartOp]="monthlyConsumptionChartOption"></app-widget-barchart>
-    </div> -->
+    </div>
     <div *ngIf="dayConsumption.length">
         <app-widget-barchart [data]="dayConsumption" [chartOp]="dailyConsumptionChartOption"></app-widget-barchart>
     </div>
