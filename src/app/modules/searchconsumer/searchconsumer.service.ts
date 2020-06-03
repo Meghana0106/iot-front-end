@@ -13,7 +13,7 @@ export class SearchconsumerService {
 
   }
 
-  monthlyBill() {
+  monthlyConsumption() {
 
     return [{
       name: 'Year 2020',
@@ -39,13 +39,10 @@ export class SearchconsumerService {
   }
 
 
-  monthlyConsumption() {
+  dailyConsumption () {
 
     return [{
-
-
       name: 'Year 2020',
-
 
       data: [
         { x: Date.UTC(2020, 1, 1), y: 20 },
@@ -83,7 +80,7 @@ export class SearchconsumerService {
     },
     ];
   }
-  dailyConsumption() {
+  monthlyBill() {
     return [{
       name: 'Year 2020',
 
@@ -213,14 +210,20 @@ export class SearchconsumerService {
   // }
   public getConsumptionByRRNumber(consumerId: string) {
     // const url=`http://localhost:3000/consumptionPerYear/${RRNumber="987654321"}`;
-    const url = `http://localhost:3000/consumptionPerMonth/${111}`;
+    const url = `http://localhost:3000/consumptionPerMonth/${"RR005"}`;
     return this.httpClient.get<any[]>(url);
   }
 
   public getconsumptionByRRNumber(consumerId: string) {
-    const url = `http://localhost:3000/consumptionPerYear/${111}`;
+    const url = `http://localhost:3000/consumptionPerYear/${"RR005"}`;
     return this.httpClient.get<any[]>(url);
   }
+  public getcOnsumptionByRRNumber(consumerId: string) {
+    const url = `http://localhost:3000/consumptionPerDay/${"RR005"}`;
+    return this.httpClient.get<any[]>(url);
+  }
+
+  
 
   
   public getSearchByconsumer(consumerId: string) {

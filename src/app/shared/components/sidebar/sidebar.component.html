@@ -1,21 +1,21 @@
 
 
-<mat-nav-list>
-    <div class="profile-card">
-        <!-- <div class="header">
-            <h2>Smart Meter Reading</h2>
-            <h4>anitha13mar@gmail.com</h4>
-        </div> -->
-        <img src="/assets/images/download.jpg" alt="Soufiane FADIL">
-    </div>
+<mat-nav-list class="example-sidenav" (mouseenter)="mouseenter()" (mouseleave)="mouseleave()">
 
+    <!-- <mat-list-item (click)="showSubmenu = !showSubmenu" class="parent">
+        <span class="full-width" *ngIf="isExpanded || isShowing">Parent Menu</span>
+        <mat-icon mat-list-icon>home</mat-icon>
+        <mat-icon class="menu-button" [ngClass]="{'rotated' : showSubmenu}" *ngIf="isExpanded || isShowing">expand_more</mat-icon>
+    </mat-list-item> -->
     <mat-divider></mat-divider>
 
-    <!-- <h2 matSubheader>Pages</h2> -->
     <div *ngIf="loggedIn">
         <a mat-list-item routerLinkActive="list-item-active" routerLink="/dashboard">Dashboard</a>
+        <mat-divider></mat-divider>
         <a mat-list-item routerLinkActive="list-item-active" routerLink="/consumers">Consumers Details</a>
+        <mat-divider></mat-divider>
         <a mat-list-item routerLinkActive="list-item-active" routerLink="/searchconsumer">Search Consumer</a>
+        <mat-divider></mat-divider>
         <a mat-list-item routerLinkActive="list-item-active" routerLink="/create">Create</a>
     </div>
     <mat-divider></mat-divider>

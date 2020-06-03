@@ -10,6 +10,11 @@ export class SidebarComponent implements OnInit {
 
   globals: GlobalService;
   loggedIn = false;
+  sideBarOpen = false;
+  showSubmenu: boolean = false;
+  isShowing = false;
+  showSubSubMenu: boolean = false;
+
 
   constructor(public global: GlobalService) {
     this.globals = global;
@@ -20,12 +25,25 @@ export class SidebarComponent implements OnInit {
             .subscribe(flag => {
                 if(flag) {
                   this.loggedIn = true;
-                } else {
+                } 
+                else {
                   this.loggedIn = false;
                 }
                 console.log(this.loggedIn);
                 // this.message = message;
             });
+  }
+
+  mouseenter() {
+    if (!this.sideBarOpen) {
+      this.isShowing = true;
+    }
+  }
+
+  mouseleave() {
+    if (!this.sideBarOpen) {
+      this.isShowing = false;
+    }
   }
 
 }

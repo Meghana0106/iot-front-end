@@ -1,7 +1,23 @@
-<mat-toolbar color="primary">
+<mat-toolbar color="primary" class="example-toolbar">
+	<button mat-icon-button (click)="toggleSideBar()"><mat-icon>menu</mat-icon></button>
+	<h1 class="example-app-name">Smart Meter Reading</h1>
+</mat-toolbar>
+
+<!-- <mat-sidenav-container class="example-container" autosize>
+	<mat-sidenav #sidenav class="example-sidenav" mode="side" opened="false" (mouseenter)="mouseenter()" (mouseleave)="mouseleave()">
+        </mat-sidenav>
+        </mat-sidenav-container> -->
+
+
+
+
+
+
+
+<!-- <mat-toolbar color="primary">
     <mat-toolbar-row>
         <button mat-icon-button (click)="toggleSideBar()">
-            <!-- <mat-icon>menu</mat-icon> -->
+            
         </button>
 
         <span> Smart Meter Reading </span>
@@ -9,7 +25,7 @@
         <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
             <ul fxLayout="row" fxLayoutGap="20px">
                 
-                <!-- <li>
+                <li>
                     <button mat-icon-button>
                         <mat-icon>settings</mat-icon>
                     </button>
@@ -18,21 +34,21 @@
                     <button mat-icon-button>
                         <mat-icon>help_outline</mat-icon>
                     </button>
-                </li> -->
+                </li>
                 <li>
                     <button mat-button [matMenuTriggerFor]="menu">
                         <mat-icon>Sign out</mat-icon>
                     </button>
-                    <!-- <mat-menu #menu="matMenu">
+                    <mat-menu #menu="matMenu">
                         <button mat-menu-button (click)="logout()">
                             <mat-icon>exit_to_app</mat-icon>
                             Sign out
                             
                         </button>
-                    </mat-menu> -->
+                    </mat-menu> 
 
                 </li>
             </ul>
         </div>
     </mat-toolbar-row>
-</mat-toolbar>
+</mat-toolbar> -->

@@ -1,5 +1,4 @@
 
-
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -49,7 +48,7 @@ export class DashboardService {
 		return this.httpClient.get("http://localhost:3000/consumer");
 
 	}
-	getConsonsumptionData() {
+	getConsumptionData() {
 		return this.httpClient.get("http://localhost:3000/consumption");
 
 	}
