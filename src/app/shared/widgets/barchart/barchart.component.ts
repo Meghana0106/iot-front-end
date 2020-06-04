@@ -57,7 +57,7 @@ export class BarchartComponent implements OnInit {
 			plotOptions: {
 				column: {
 					pointPadding: 0.2,
-					borderWidth: 10
+					borderWidth: 2
 				}
 			},
 			series: this.data

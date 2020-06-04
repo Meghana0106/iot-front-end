@@ -19,23 +19,22 @@ export class SearchconsumerService {
       name: 'Year 2020',
 
       data: [
-        { x: Date.UTC(2020, 0, 1), y: 2000 },
-        { x: Date.UTC(2020, 1, 1), y: 2000 },
-        { x: Date.UTC(2020, 2, 1), y: 3200 },
-        { x: Date.UTC(2020, 3, 1), y: 2300 },
-        { x: Date.UTC(2020, 4, 1), y: 2100 },
-        { x: Date.UTC(2020, 5, 1), y: 3200 },
-        { x: Date.UTC(2020, 6, 1), y: 6200 },
-        { x: Date.UTC(2020, 7, 1), y: 5000 },
-        { x: Date.UTC(2020, 8, 1), y: 3006 },
-        { x: Date.UTC(2020, 9, 1), y: 2306 },
-        { x: Date.UTC(2020, 10, 1), y: 2376 },
-        { x: Date.UTC(2020, 11, 1), y: 6890 },
-        { x: Date.UTC(2020, 12, 1), y: 3099 }
+        { x: Date.UTC(2020, 0, 1), y: 20 },
+        { x: Date.UTC(2020, 1, 1), y: 20 },
+        { x: Date.UTC(2020, 2, 1), y: 32 },
+        { x: Date.UTC(2020, 3, 1), y: 23 },
+        { x: Date.UTC(2020, 4, 1), y: 21 },
+        { x: Date.UTC(2020, 5, 1), y: 32 },
+        { x: Date.UTC(2020, 6, 1), y: 62 },
+        { x: Date.UTC(2020, 7, 1), y: 50 },
+        { x: Date.UTC(2020, 8, 1), y: 30 },
+        { x: Date.UTC(2020, 9, 1), y: 23 },
+        { x: Date.UTC(2020, 10, 1), y: 23 },
+        { x: Date.UTC(2020, 11, 1), y: 68 },
+        { x: Date.UTC(2020, 12, 1), y: 30}
       ],
     },
     ];
-
   }
 
 
@@ -43,6 +42,7 @@ export class SearchconsumerService {
 
     return [{
       name: 'Year 2020',
+      colorByPoint: true,
 
       data: [
         { x: Date.UTC(2020, 1, 1), y: 20 },
@@ -208,23 +208,32 @@ export class SearchconsumerService {
   //   return this.httpClient.get("http://localhost:3000/consumption");
 
   // }
+
+
+
+  // Monthdata
   public getConsumptionByRRNumber(consumerId: string) {
     // const url=`http://localhost:3000/consumptionPerYear/${RRNumber="987654321"}`;
-    const url = `http://localhost:3000/consumptionPerMonth/${"RR005"}`;
+    const url = `http://localhost:2000/consumptionPerMonth/${"RR005"}`;
     return this.httpClient.get<any[]>(url);
   }
 
+
+// Year Data
   public getconsumptionByRRNumber(consumerId: string) {
-    const url = `http://localhost:3000/consumptionPerYear/${"RR005"}`;
+    const url = `http://localhost:2000/consumptionPerYear/${"RR005"}`;
     return this.httpClient.get<any[]>(url);
   }
+
+
+  // Daydata
+
   public getcOnsumptionByRRNumber(consumerId: string) {
-    const url = `http://localhost:3000/consumptionPerDay/${"RR005"}`;
+    const url = `http://localhost:2000/consumptionPerDay/${"RR006"}`;
     return this.httpClient.get<any[]>(url);
   }
 
   
-
   
   public getSearchByconsumer(consumerId: string) {
     const url = `http://localhost:3000/consumer?consumerId=${consumerId}`;

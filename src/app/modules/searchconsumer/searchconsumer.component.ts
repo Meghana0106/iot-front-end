@@ -32,7 +32,7 @@ export class SearchconsumerComponent implements OnInit {
 
 	barchart = [];
 	pieChart = [];
-	lineChart = [];
+	splineChart = [];
 	monthlyBill = [];
 	yearlyConsumption = [];
 	yearConsumption = [];
