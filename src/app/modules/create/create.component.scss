@@ -1,27 +1,30 @@
 .fill-remaining-space {
-  /* This fills the remaining space, by using flexbox. 
-     Every toolbar row uses a flexbox row layout. */
+ 
   flex: 1 1 auto;
 }
 
 .container {
-  padding: 10px;
-  
-}
-
-.form {
-  min-width: 150px;
-  max-width: 500px;
-  width: 100%;
-  padding-left: 400px;
+  // padding: 50px;
+  width: 60vh;
+  background-color: green($color: #000000) !important;
   align-content: center;
+}
+  
+.form {
+  // min-width: 150px;
+  // max-width: 500px;
+  // width: 100%;
+  padding-left: 45%;
+  
 }
 
 .form-element {
   padding: 5px 0px 25px 2px;
   width: 100%;
+  
 }
 
 .button {
   width: 100%;
 }
+
