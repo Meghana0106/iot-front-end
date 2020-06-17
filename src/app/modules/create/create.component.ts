@@ -21,8 +21,8 @@ export class CreateComponent implements OnInit {
   ngOnInit() {
 	this.addForm = this.formBuilder.group({
 		name: ['', Validators.required],
-		contact: ['', [Validators.required, Validators.pattern('^[6-9]\d{9}$')]],
-		email: ['', [Validators.required, Validators.email,Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$')]],
+		 contact: ['', Validators.required],
+		 email: ['', Validators.required],
 		address: ['', Validators.required],
 		rr_no: ['', Validators.required]
 	});

@@ -1,4 +1,4 @@
-<div class="container app-body">
+<!-- <div class="container app-body">
 	<main class="main d-flex align-items-center">
 	
 			<div class="row">
@@ -40,6 +40,67 @@
 				</div>
 			</div>
 	</main>
-</div>
+</div> -->
 
+<!-- <div class="main-div">
 
+	<mat-card-content>
+		
+			<form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="my-form">
+			
+		   <mat-form-field class="full-width" >
+				  <mat-label>User Name</mat-label>
+				  <input  matInput  placeholder="Mr/Ms XYZ "  formControlName="username" required
+				  [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+				  <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+				
+					<div *ngIf="f.username.errors.required "> Name is required</div>
+				</div>
+			</mat-form-field>
+
+			<br><br>
+
+			<mat-form-field class="full-width" >
+				<mat-label>Enter Your Password</mat-label>
+				<input  matInput  placeholder="Password"  formControlName="password" required
+				[ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+				<div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+			  
+				  <div *ngIf="f.password.errors.required "> Contact Number is required</div>
+			  </div>
+		  </mat-form-field>
+
+		  <br><br>
+
+		
+		<mat-card-actions>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<button mat-raised-button [disabled]="loading" color="primary">Submit</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<button mat-raised-button (click)="onReset()" color="primary">Cancel</button>
+		  </mat-card-actions>
+		</form>
+	  </mat-card-content>
+	  </div> -->
+
+	  <div class="signin-content">
+		<mat-card>
+		  <mat-card-content>
+			<form [formGroup]="form" (ngSubmit)="onSubmit()">
+			  <p>Please login to continue</p>
+			  <mat-form-field class="full-width-input">
+				<input matInput placeholder="User" formControlName="userName" required>
+				<mat-error *ngIf="isFieldInvalid('userName')">
+				  Please inform your user name
+				</mat-error>
+			  </mat-form-field>
+			  <mat-form-field class="full-width-input">
+				<input matInput type="password" placeholder="Password" formControlName="password" required>
+				<mat-error *ngIf="isFieldInvalid('userName')">
+				  Please inform your password
+				</mat-error>
+			  </mat-form-field>
+			  <button mat-raised-button color="primary" type="submit">Login</button>
+			</form>
+		  </mat-card-content>
+		</mat-card>
+	  </div>

@@ -1,30 +1,37 @@
-.fill-remaining-space {
- 
-  flex: 1 1 auto;
-}
-
-.container {
-  // padding: 50px;
-  width: 60vh;
-  background-color: green($color: #000000) !important;
+.my-form{
+  // background-color: honeydew;
+  margin-top: 20px;
   align-content: center;
-}
+  justify-content: center;
+  justify-self: center;
+   min-width: 350px;
+   max-width: 700px;
+   width: 100%;
+   align-items: center;
   
-.form {
-  // min-width: 150px;
-  // max-width: 500px;
-  // width: 100%;
-  padding-left: 45%;
-  
 }
-
-.form-element {
-  padding: 5px 0px 25px 2px;
+ 
+.full-width {
   width: 100%;
+  font-size: 17px;
+  
   
 }
-
-.button {
-  width: 100%;
+.main-div{
+  height: 80vh;
+  // background-color: honeydew;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+.button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+::ng-deep .mat-card-content{
 
+  border: 55px !important;
+  border-radius: 30px !important;
+  border: #000 !important;
+ }

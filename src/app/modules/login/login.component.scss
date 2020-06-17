@@ -1,18 +1,11 @@
-
-.error{
-  color: tomato; 
-  font-size: 12px; 
-  padding-top: 4px
-}
-.container {
-  font-size: 20px;
+mat-card {
+  max-width: 400px;
+  margin: 2em auto;
   text-align: center;
-  padding: 50px;
-  position: relative;
-  margin: 5% auto;
-  width: 400px;
-  height: 200px;
-  background: #FFF;
-  border-radius: 2px;
-   
+}
+.signin-content {
+  padding: 60px 1rem;
+}
+.full-width-input {
+  width: 100%;
 }
